@@ -1,0 +1,145 @@
+@use 'general'
+@use 'variables'
+@use 'fonts'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    height: 100vh
+    width: 100wv
+    display: flex
+    justify-content: center
+    align-items: center
+
+// LoginPage
+
+.authForm
+    height: 80%
+    width: 50%
+    display: flex
+    justify-content: center
+    &__regForm
+        background-color: #e8ceb9
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        gap: 1em
+        width: 50%
+        border-radius: 2em
+        &__input
+            font-size: variables.$fontSize
+            font-family: variables.$fontFamily
+            padding: .5em
+            border-radius: .2em
+            width: 100%
+            height: 100%
+            transition: 1s
+            &:hover
+                outline: 1px solid black
+                // background-color: red
+            &:focus
+                outline: 1px solid red
+                box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75) inset
+        &__submit
+            outline: none
+            border: none
+            padding: .5em
+            font-size: 1em
+            border-radius: .3em
+            cursor: pointer
+            transition: 200ms
+            &:hover
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+            &:active
+                box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75) inset
+        &__title
+            color: red
+            font-family: fonts.$Jacquarda
+            font-size: 5em
+
+// End of Login Page
+
+// NOTES 
+
+.todo
+    height: 50vh
+    width: 15vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    div,ul
+        padding: .5em
+        width: 100%
+        display: flex
+
+    &__entry
+        background-color: variables.$primary_color
+        height: 40%
+        border-top-left-radius: .5em
+        border-top-right-radius: .5em
+        border-bottom: 2px solid #B9D3E8
+        box-shadow: 0px 7px 4px 0px #B9D3E8
+        &__input
+            width: 80%
+            padding: .5em
+            font-size: variables.$fontSize
+            border: none
+            border-radius: .5em
+            // border-bottom: 0px solid black
+            transition: 200ms
+            &:hover
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+            &:focus
+                box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75) inset
+        &__button
+            width: 18%
+            font-size: variables.$fontSize
+            padding: .5em
+            border-radius: .5em
+            border: none
+            cursor: pointer
+            transition: 500ms
+            &:hover
+                background-color: variables.$complementary_color
+    &__list
+        background-color: #e8ceb9
+        min-height: 100%
+        flex-direction: column
+        gap: 1em
+        &__item
+            background-color: variables.$complementary_color
+            padding: .5em
+            font-size: variables.$fontSize
+            font-family: variables.$fontFamily
+            border-radius: .2em
+            cursor: pointer
+            justify-content: space-between
+            align-items: center
+            display: flex
+            &__name::first-letter
+                text-transform: uppercase
+            i
+                float: right
+                background-color: variables.$primary_color
+                padding: .5em
+            &--done
+                background-color: variables.$accent_color
+                padding: .5em
+                font-size: variables.$fontSize
+                font-family: variables.$fontFamily
+                border-radius: .2em
+                cursor: pointer
+                justify-content: space-between
+                align-items: center
+                display: flex
+                text-decoration: line-through
+                &__name::first-letter
+                    text-transform: uppercase
+                i
+                    float: right
+                    background-color: variables.$primary_color
+                    padding: .5em
