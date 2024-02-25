@@ -11,8 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/54a2fbf2a7.js" crossorigin="anonymous"></script>
-    <script src="../js/notes.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/54a2fbf2a7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/notes_v1.js" defer></script>
     <title>Hub</title>
   </head>
   <body>
@@ -25,12 +28,15 @@
           class="todo__entry__input"
           id="todo__entry__input"
         />
-        <button class="todo__entry__button" id="todo__entry__button" onclick="addTodo()">
+        <button
+          class="todo__entry__button"
+          id="todo__entry__button"
+          onclick="addItem()"
+        >
           Add
         </button>
       </div>
-      <ul class="todo__list">
-      </ul>
+      <ul class="todo__list"></ul>
     </div>
   </body>
 </html>
