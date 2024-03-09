@@ -1,4 +1,3 @@
 function openWindow() {
-    window.location.href = './pages/homepage.html'
+  window.location.href = "./pages/notes.html";
 }
-
